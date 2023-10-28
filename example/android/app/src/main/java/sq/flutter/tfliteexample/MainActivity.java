@@ -1,7 +1,9 @@
 package sq.flutter.tfliteexample;
 
 import android.os.Bundle;
-import io.flutter.app.FlutterActivity;
+import io.flutter.embedding.app.FlutterActivity;
+
+import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
 public class MainActivity extends FlutterActivity {
