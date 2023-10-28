@@ -301,7 +301,7 @@ class _MyAppState extends State<MyApp> {
 
   List<Widget> renderBoxes(Size screen) {
     if (_recognitions == null) return [];
-    if (_imageHeight == null || _imageWidth == null) return [];
+    if (_imageWidth == null) return [];
 
     double factorX = screen.width;
     double factorY = _imageHeight / _imageWidth * screen.width;
@@ -335,7 +335,7 @@ class _MyAppState extends State<MyApp> {
 
   List<Widget> renderKeypoints(Size screen) {
     if (_recognitions == null) return [];
-    if (_imageHeight == null || _imageWidth == null) return [];
+    if (_imageWidth == null) return [];
 
     double factorX = screen.width;
     double factorY = _imageHeight / _imageWidth * screen.width;
@@ -371,7 +371,7 @@ class _MyAppState extends State<MyApp> {
     Size size = MediaQuery.of(context).size;
     List<Widget> stackChildren = [];
 
-    if (_model == deeplab && _recognitions != null) {
+    if (_model == deeplab) {
       stackChildren.add(Positioned(
         top: 0.0,
         left: 0.0,
